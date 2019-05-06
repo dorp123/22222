@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Use Her pass</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="">
+        <label for="">Please Enter The Password:</label>
+        <input type="text" id="user">
+        <input type="button" value="Enter Site" id="TheClick" onclick="check()">
+    </form>
+    <script>
+        var flag = 0;
+        var countit = 1;
+    function check() {
+    
+        var userpass = document.getElementById("user").value;
+    var thepass = ["1111", "2222", "3333", "4444", "5555"];
+    for(let a = 0; a < thepass.length; a++){
+        
+ if(userpass == thepass[a]){
+     document.location = "http://www.youtube.com";
+     flag = 1;
+     break;
+    }
+}
+   if (flag == 0) {
+       alert("please try again!");
+       countit++;
+   }
+   if(CountIt == 6) {
+       document.getElementById("user").disabled = true;
+       document.getElementById("TheClick").disabled = true;
+   }
+ }
+ 
+    </script>
+</body>
+</html>
